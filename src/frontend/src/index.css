@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 15 3% 6%;
+    --foreground: 0 0% 98%;
+    --card: 15 5% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 15 5% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 54 0.18 85;
+    --primary-foreground: 15 3% 6%;
+    --secondary: 15 5% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 15 5% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 54 0.18 85;
+    --accent-foreground: 15 3% 6%;
+    --destructive: 25 0.2 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 15 5% 18%;
+    --input: 15 5% 18%;
+    --ring: 54 0.18 85;
+    --radius: 0.75rem;
+    --chart-1: 54 0.18 85;
+    --chart-2: 15 5% 30%;
+    --chart-3: 200 0.1 60%;
+    --chart-4: 120 0.1 60%;
+    --chart-5: 300 0.1 60%;
+    --sidebar: 15 3% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 54 0.18 85;
+    --sidebar-primary-foreground: 15 3% 6%;
+    --sidebar-accent: 15 5% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 15 5% 18%;
+    --sidebar-ring: 54 0.18 85;
+
+    /* Custom brand tokens */
+    --gold: #ffd700;
+    --gold-light: #ffe44d;
+    --gold-dark: #cc9f00;
+    --whatsapp: #25d366;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+/* Gold glow effect */
+.gold-glow {
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5), 0 0 60px rgba(255, 215, 0, 0.2);
+}
+
+/* Animate pulse for availability badge */
+@keyframes pulse-green {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
